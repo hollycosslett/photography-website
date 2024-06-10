@@ -13,7 +13,13 @@ body {
   font-family: var(--main-text-font);
   max-height: 50px;
 }
-
+.nav-container a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+li:hover {
+  text-decoration: underline;
+}
 ul {
   margin: 0 30px;
   align-self: center;
@@ -47,19 +53,20 @@ li {
   margin: 0 auto;
   max-width: 100%;
 }
+h1 {
+  letter-spacing: 7.5px;
+  line-height: 1.5;
+  font-size: 72px;
+  font-weight: bold;
+}
+
 .hero-text h3 {
   font-size: 24px;
   letter-spacing: 2px;
   font-weight: bold;
   line-height: 1.5;
 }
-.hero-text h1,
-.about-text h1 {
-  letter-spacing: 7.5px;
-  line-height: 1.5;
-  font-size: 72px;
-  font-weight: bold;
-}
+
 .hero p {
   padding: 0 90px;
   line-height: 2;
@@ -108,16 +115,24 @@ footer p {
   max-width: 100%;
   margin: 0 auto;
 }
-.about-main-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .about-img-container {
-  text-align: center;
   background-color: #212121;
 }
 .about-text {
   padding: 40px 20px;
+}
+
+.about-p {
+  margin: 0 auto;
+}
+.about-text p {
+  max-width: 550px;
 }
 .btn-about {
   margin-top: 80px;
@@ -131,25 +146,50 @@ footer p {
 .about-text p {
   font-size: 18px;
   margin-top: 35px;
-  width: 550px;
+}
+.gallery-container h1 {
+  text-align: center;
+  margin-top: 20px;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1230px) {
   .about-text {
-    padding: 30px 20px;
+    padding: 20px 10px;
   }
+}
+
+@media (max-width: 1180px) {
   .about-text h1 {
     font-size: 45px;
   }
+  .btn-about {
+    margin-top: 20px;
+  }
   .about-text p {
-    font-size: 16px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .about-text h6 {
+    margin-top: 30px;
+  }
+
+  .about-text p {
+    margin-top: 20px;
+    max-width: 100%;
   }
   .btn-about {
     margin-top: 30px;
   }
 }
 @media (max-width: 767px) {
-  .hero-text h1 {
+  h1 {
     font-size: 50px;
   }
   .hero-text h3 {
@@ -180,9 +220,9 @@ footer p {
     height: 500px;
   }
   .hero-text {
-    padding: 150px;
+    padding: 15px;
   }
-  .hero-text h1 {
+  h1 {
     font-size: 25px;
   }
   .hero-text h3 {
@@ -196,12 +236,17 @@ footer p {
     padding: 7px;
     font-size: 10px;
   }
+  .logo-container {
+    max-width: 35px;
+  }
   .logo {
-    width: 30px;
+    width: 35px;
+    margin-left: 20px;
   }
   ul {
     text-align: left;
     padding: 0;
+    margin-right: 5px;
   }
   li {
     font-size: 8px;
@@ -225,16 +270,13 @@ footer p {
   .hero-text {
     padding: 100px 0;
   }
-  .hero-text h1 {
+  h1 {
     font-size: 20px;
   }
   .hero-text h3 {
     font-size: 16px;
   }
   .hero-text p {
-    display: none;
-  }
-  .logo-container {
     display: none;
   }
 }
