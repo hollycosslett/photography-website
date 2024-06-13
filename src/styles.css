@@ -88,11 +88,11 @@ h1 {
 .btn-main:hover {
   border: 1px solid var(--secondary-color);
 }
-
 .footer-bar {
+  background-color: rgb(40, 35, 35);
   font-family: var(--main-text-font);
-  height: 50px;
 }
+
 footer img {
   margin: 12.5px 0;
   padding: 12px;
@@ -140,18 +140,40 @@ footer p {
 .about-text h1 {
   font-size: 64px;
 }
-.about-text h6 {
+.about-text h6,
+.contact-container h6 {
   color: rgb(246, 82, 130);
+  text-transform: uppercase;
 }
 .about-text p {
   font-size: 18px;
   margin-top: 35px;
 }
-.gallery-container h1 {
+.gallery-container h1,
+.contact-container h1 {
   text-align: center;
   margin-top: 20px;
 }
 
+.contact-container {
+  text-align: center;
+}
+.contact-text {
+  padding: 40px;
+  margin-bottom: 200px;
+}
+.contact-container p {
+  font-size: 18px;
+}
+.address,
+.email,
+.phone {
+  display: flex;
+  justify-content: center;
+}
+.location-img {
+  margin-right: 20px;
+}
 @media (max-width: 1230px) {
   .about-text {
     padding: 20px 10px;
